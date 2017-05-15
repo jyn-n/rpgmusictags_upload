@@ -57,8 +57,8 @@ title_to_tag_id = dict()
 for line in f:
 	i, tags = line.replace('\n', '').split(': ')
 	if tags == '':
-		continue
-#		title_to_tag_id[titles[int(i)-1]] = []
+#		continue
+		title_to_tag_id[titles[int(i)-1]] = []
 	else:
 		title_to_tag_id[titles[int(i)-1]] = [tag_id[tag] for tag in tags.split(',')]
 #
@@ -69,7 +69,7 @@ for line in f:
 #print (']')
 #
 for title in titles:
-	if title_to_tag_id.keys().isdisjoint([title]): continue
+	#if title_to_tag_id.keys().isdisjoint([title]): continue
 
 	print (',Files:[' + title_string ( title ) + ']' + ',TagsForFiles:[{FileID:' + '0' + ',TagIds:[' + ','.join ( map ( str , title_to_tag_id [ title ] ) ) + ']}]' )
 
