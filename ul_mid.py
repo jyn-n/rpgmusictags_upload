@@ -49,7 +49,7 @@ for i, title in enumerate(titles):
 	title_id[title] = i
 
 def title_string (title):
-	return '{Id:' + '0' + ',Artist:' + artist + ',Album:' + album + ',Title:' + title + '}'
+	return '{Id:' + '0' + ',Artist:' + artist + ',Album:' + album + ',Title:"' + title + '"}'
 #
 #print (','.join(map(title_string, titles)))
 #

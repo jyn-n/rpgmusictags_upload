@@ -1,12 +1,15 @@
 #!/bin/python
 
 import os
+import sys
 
 taglist_directory = "/usr/share/tag/"
 
+if len(sys.argv) <= 1 or sys.argv[1] != 'notest':
+	print('Test=True&')
+
 print ('IncludeLog=True\
 &User=knups\
-&Test=True\
 &TagsData={\
 Languages:[{ISO6391Code:de,Id:0}]\
 ,Categories:[')
